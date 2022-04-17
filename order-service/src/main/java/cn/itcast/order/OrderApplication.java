@@ -20,4 +20,12 @@ public class OrderApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+//    /**
+//     * 全局负载均衡规则（随机）
+//     */
+//    @Bean
+//    public IRule randomRule() {
+//        return new RandomRule();
+//    }
 }
