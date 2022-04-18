@@ -13,6 +13,7 @@ spring:
       server-addr: localhost:8848
       discovery:
         cluster-name: Hangzhou
+        namespace: 979d7d50-4461-4fb8-8f2f-6323d1532d5e
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
