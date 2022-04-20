@@ -7,14 +7,14 @@ spring:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: orderservice
+    name: oder_service
   cloud:
     nacos:
-      server-addr: localhost:8848
+      server-addr: localhost:80
       discovery:
         cluster-name: Hangzhou
-        namespace: 979d7d50-4461-4fb8-8f2f-6323d1532d5e
-        ephemeral: false  # 是否是临时实例
+#        ephemeral: false
+#        namespace: 979d7d50-4461-4fb8-8f2f-6323d1532d5e
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
