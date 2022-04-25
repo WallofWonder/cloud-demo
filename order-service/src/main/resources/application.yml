@@ -36,8 +36,8 @@ ribbon:
     enabled: true
     clients:
       - userservice
-#feign:
-#  client:
-#    config:
-#      default:
-#        loggerLevel: FULL
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
