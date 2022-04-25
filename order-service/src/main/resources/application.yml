@@ -36,3 +36,8 @@ ribbon:
     enabled: true
     clients:
       - userservice
+#feign:
+#  client:
+#    config:
+#      default:
+#        loggerLevel: FULL
