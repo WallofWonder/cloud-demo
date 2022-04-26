@@ -7,7 +7,7 @@ spring:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: oder_service
+    name: order-service
   cloud:
     nacos:
       server-addr: localhost:80
