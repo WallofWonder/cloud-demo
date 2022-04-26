@@ -22,3 +22,20 @@ spring:
             - Before=2031-01-20T17:42:47.789-07:00[Asia/Shanghai] # 只允许这个时间后的请求
       default-filters: # 默认过滤项，对所有请求生效
         - AddRequestHeader=Truth, Itcast is freaking awesome!
+      globalcors: # 全局的跨域处理
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: # 允许哪些网站的跨域请求
+              - "http://localhost:5500"
+              - "http://127.0.0.1:5500"
+              - "http://www.leyou.com"
+            allowedMethods: # 允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*" # 允许在请求中携带的头信息
+            allowCredentials: true # 是否允许携带cookie
+            maxAge: 360000 # 这次跨域检测的有效期
