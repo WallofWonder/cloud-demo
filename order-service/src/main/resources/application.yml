@@ -5,12 +5,12 @@ spring:
     url: jdbc:mysql://localhost:3306/cloud_order?useSSL=false
     username: root
     password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
   application:
     name: order-service
   cloud:
     nacos:
-      server-addr: localhost:80
+      server-addr: localhost:8848
       discovery:
         cluster-name: Hangzhou
 #        ephemeral: false
