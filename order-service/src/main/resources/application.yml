@@ -15,6 +15,9 @@ spring:
         cluster-name: Hangzhou
 #        ephemeral: false
 #        namespace: 979d7d50-4461-4fb8-8f2f-6323d1532d5e
+    sentinel:
+      transport:
+        dashboard: localhost:8090
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
