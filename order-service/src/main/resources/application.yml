@@ -18,6 +18,10 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8090
+      # 链路模式中，是对不同来源的两个链路做监控。
+      # 但是sentinel默认会给进入SpringMVC的所有请求设置同一个root资源，
+      # 会导致链路模式失效。我们需要关闭这种对SpringMVC的资源聚合
+      web-context-unify: false
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
