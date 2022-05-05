@@ -43,6 +43,9 @@ public class UserController {
         if (id == 1) {
             Thread.sleep(60);
         }
+        if (id == 2) {
+            throw new RuntimeException("伪造异常，触发异常比例熔断");
+        }
         System.out.println("Truth: " + truth);
         return userService.queryById(id);
     }
