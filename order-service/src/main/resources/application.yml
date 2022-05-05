@@ -48,3 +48,5 @@ feign:
     enabled: true
     max-connections: 200
     max-connections-per-route: 50
+  sentinel:
+    enabled: true # 开启feign对sentinel的支持
