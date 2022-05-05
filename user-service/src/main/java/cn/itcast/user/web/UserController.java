@@ -39,7 +39,10 @@ public class UserController {
      */
     @GetMapping("/{id}")
     public User queryById(@PathVariable("id") Long id,
-                          @RequestHeader(value = "Truth", required = false) String truth) {
+                          @RequestHeader(value = "Truth", required = false) String truth) throws InterruptedException {
+        if (id == 1) {
+            Thread.sleep(60);
+        }
         System.out.println("Truth: " + truth);
         return userService.queryById(id);
     }
