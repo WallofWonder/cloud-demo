@@ -2,6 +2,7 @@ package cn.itcast.order.web;
 
 import cn.itcast.order.pojo.Order;
 import cn.itcast.order.service.OrderService;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ public class OrderController {
    @Autowired
    private OrderService orderService;
 
+   @SentinelResource("hot") // 热点参数限流对默认的SpringMVC资源无效，需要利用@SentinelResource注解标记资源
     @GetMapping("{orderId}")
     public Order queryOrderByUserId(@PathVariable("orderId") Long orderId) {
         // 根据id查询订单并返回
